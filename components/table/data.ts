@@ -1,5 +1,7 @@
 export const columns = [
+   // {name: "ID",   uid:   'id'},
    {name: 'NAME', uid: 'name'},
+   // {name: 'MAIL', uid: 'email'},
    {name: 'ROLE', uid: 'role'},
    {name: 'STATUS', uid: 'status'},
    {name: 'ACTIONS', uid: 'actions'},

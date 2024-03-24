@@ -40,7 +40,7 @@ export const SidebarWrapper = () => {
         <div className="flex flex-col justify-between h-full">
           <div className={Sidebar.Body()}>
             <SidebarItem
-              title="Home"
+              title="Дашорд"
               icon={<HomeIcon />}
               isActive={pathname === "/"}
               href="/"
@@ -48,31 +48,26 @@ export const SidebarWrapper = () => {
             <SidebarMenu title="Main Menu">
               <SidebarItem
                 isActive={pathname === "/accounts"}
-                title="Accounts"
+                title="Пользователи"
                 icon={<AccountsIcon />}
                 href="accounts"
               />
               <SidebarItem
                 isActive={pathname === "/payments"}
-                title="Payments"
+                title="Платежи"
                 icon={<PaymentsIcon />}
               />
               <CollapseItems
                 icon={<BalanceIcon />}
                 items={["Banks Accounts", "Credit Cards", "Loans"]}
-                title="Balances"
-              />
-              <SidebarItem
-                isActive={pathname === "/customers"}
-                title="Customers"
-                icon={<CustomersIcon />}
+                title="Счета"
               />
               <SidebarItem
                 isActive={pathname === "/products"}
-                title="Products"
+                title="Тарифы"
                 icon={<ProductsIcon />}
               />
-              <SidebarItem
+              {/*<SidebarItem
                 isActive={pathname === "/reports"}
                 title="Reports"
                 icon={<ReportsIcon />}
@@ -94,15 +89,7 @@ export const SidebarWrapper = () => {
                 isActive={pathname === "/settings"}
                 title="Settings"
                 icon={<SettingsIcon />}
-              />
-            </SidebarMenu>
-
-            <SidebarMenu title="Updates">
-              <SidebarItem
-                isActive={pathname === "/changelog"}
-                title="Changelog"
-                icon={<ChangeLogIcon />}
-              />
+              /> */}
             </SidebarMenu>
           </div>
           <div className={Sidebar.Footer()}>
@@ -115,12 +102,6 @@ export const SidebarWrapper = () => {
               <div className="max-w-fit">
                 <FilterIcon />
               </div>
-            </Tooltip>
-            <Tooltip content={"Profile"} color="primary">
-              <Avatar
-                src="https://i.pravatar.cc/150?u=a042581f4e29026704d"
-                size="sm"
-              />
             </Tooltip>
           </div>
         </div>

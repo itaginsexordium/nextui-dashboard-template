@@ -52,7 +52,12 @@ export const RenderCell = ({ user, columnKey }: Props) => {
           <span className="capitalize text-xs">{cellValue}</span>
         </Chip>
       );
-
+      case "id":
+        return (
+          <div>
+            <span>{cellValue}</span>
+          </div>
+        );
     case "actions":
       return (
         <div className="flex items-center gap-4 ">
@@ -67,17 +72,6 @@ export const RenderCell = ({ user, columnKey }: Props) => {
             <Tooltip content="Edit user" color="secondary">
               <button onClick={() => console.log("Edit user", user.id)}>
                 <EditIcon size={20} fill="#979797" />
-              </button>
-            </Tooltip>
-          </div>
-          <div>
-            <Tooltip
-              content="Delete user"
-              color="danger"
-              onClick={() => console.log("Delete user", user.id)}
-            >
-              <button>
-                <DeleteIcon size={20} fill="#FF0080" />
               </button>
             </Tooltip>
           </div>
